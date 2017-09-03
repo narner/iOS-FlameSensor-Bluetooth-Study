@@ -18,7 +18,6 @@
   #include <SoftwareSerial.h>
 #endif
 
-#include <CapacitiveSensor.h>
 #include "Adafruit_BLE.h"
 #include "Adafruit_BluefruitLE_SPI.h"
 #include "Adafruit_BluefruitLE_UART.h"
@@ -46,7 +45,7 @@ void error(const __FlashStringHelper*err) {
 */
 /**************************************************************************/
 
-CapacitiveSensor   cs_9_10 = CapacitiveSensor(9,10);        // 10M resistor between pins 4 & 2, pin 2 is sensor pin, add a wire and or foil if desired
+//CapacitiveSensor   cs_9_10 = CapacitiveSensor(9,10);        // 10M resistor between pins 4 & 2, pin 2 is sensor pin, add a wire and or foil if desired
 
 // lowest and highest sensor readings:
 const int sensorMin = 0;     // sensor minimum
@@ -55,7 +54,7 @@ const int sensorMax = 1024;  // sensor maximum
 void setup(void) {
   while (!Serial);  // required for Flora & Micro
   delay(500);
-  cs_9_10.set_CS_AutocaL_Millis(0xFFFFFFFF);     // turn off autocalibrate on channel 1 - just as an example
+  //cs_9_10.set_CS_AutocaL_Millis(0xFFFFFFFF);     // turn off autocalibrate on channel 1 - just as an example
 
   Serial.begin(115200);
 
@@ -106,9 +105,8 @@ void setup(void) {
 /**************************************************************************/
 void loop(void) {
 
-    long total1 =  cs_9_10.capacitiveSensor(30);
-    // read the sensor on analog A0:
-    int sensorReading = analogRead(A0);
+    // read the sensor on analog A9:
+    int sensorReading = analogRead(A9);
     // map the sensor range (four options):
     // ex: 'long int map(long int, long int, long int, long int, long int)'
     int range = map(sensorReading, sensorMin, sensorMax, 0, 3);
@@ -116,19 +114,19 @@ void loop(void) {
     // range value:
     switch (range) {
         case 0:    // A fire closer than 1.5 feet away.
-          Serial.print(0);
+          Serial.println(0);
           Serial.flush();
           delay(20);
           //Serial.print("** Close Fire **");
         break;
         case 1:    // A fire between 1-3 feet away.
-          Serial.print(1);
+          Serial.println(1);
           Serial.flush();
           delay(20);
           //Serial.print("** Distant Fire **");
          break;
         case 2:    // No fire detected.
-          Serial.print(2);
+          Serial.println(2);
           Serial.flush();
           delay(20);
           //Serial.print("No Fire");
@@ -137,7 +135,7 @@ void loop(void) {
 
 
     ble.print("AT+BLEUARTTX=");
-    ble.println(total1);
+    ble.println(range);
 
     // check response stastus
     if (! ble.waitForOK() ) {
