@@ -14,8 +14,8 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
   
     //UI
     @IBOutlet var stateLabel: UILabel!
-    @IBOutlet var backgroundView: UIView!
     
+    @IBOutlet var backgroundView: UIView!
     //Data
     var peripheralManager: CBPeripheralManager?
     var peripheral: CBPeripheral!
@@ -30,7 +30,9 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
         //-Notification for updating the text view with incoming text
         updateIncomingData()
     }
+   
 
+    
     override func viewDidDisappear(_ animated: Bool) {
         peripheralManager?.stopAdvertising()
         self.peripheralManager = nil
@@ -49,7 +51,7 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
             } else if (dataString == "1") {
                 self.stateLabel.text = "Distant Fire"
                 self.backgroundView.backgroundColor = UIColor.red
-            } else if (dataString == "2") {
+            } else {
                 self.stateLabel.text = "No Fire"
                 self.backgroundView.backgroundColor = UIColor.white
             }
@@ -67,6 +69,7 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
     func peripheralManager(_ peripheral: CBPeripheralManager, central: CBCentral, didSubscribeTo characteristic: CBCharacteristic) {
         print("Device subscribe to characteristic")
     }
+    
     
     func peripheralManagerDidStartAdvertising(_ peripheral: CBPeripheralManager, error: Error?) {
         if let error = error {

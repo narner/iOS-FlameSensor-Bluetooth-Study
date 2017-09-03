@@ -88,14 +88,6 @@ void setup(void) {
       delay(500);
   }
 
-  // LED Activity command is only supported from 0.6.6
-  if ( ble.isVersionAtLeast(MINIMUM_FIRMWARE_VERSION) ) {
-    // Change Mode LED Activity
-    Serial.println(F("******************************"));
-    Serial.println(F("Change LED activity to " MODE_LED_BEHAVIOUR));
-    ble.sendCommandCheckOK("AT+HWModeLED=" MODE_LED_BEHAVIOUR);
-    Serial.println(F("******************************"));
-  }
 }
 
 /**************************************************************************/
@@ -105,7 +97,7 @@ void setup(void) {
 /**************************************************************************/
 void loop(void) {
 
-    // read the sensor on analog A9:
+    // read the sensor on analog A0:
     int sensorReading = analogRead(A9);
     // map the sensor range (four options):
     // ex: 'long int map(long int, long int, long int, long int, long int)'
@@ -116,20 +108,14 @@ void loop(void) {
         case 0:    // A fire closer than 1.5 feet away.
           Serial.println(0);
           Serial.flush();
-          delay(20);
-          //Serial.print("** Close Fire **");
-        break;
+         break;
         case 1:    // A fire between 1-3 feet away.
           Serial.println(1);
           Serial.flush();
-          delay(20);
-          //Serial.print("** Distant Fire **");
          break;
         case 2:    // No fire detected.
           Serial.println(2);
           Serial.flush();
-          delay(20);
-          //Serial.print("No Fire");
         break;
       }
 
