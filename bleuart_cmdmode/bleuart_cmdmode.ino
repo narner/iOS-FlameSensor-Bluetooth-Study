@@ -97,7 +97,7 @@ void setup(void) {
 /**************************************************************************/
 void loop(void) {
 
-    // read the sensor on analog A0:
+    // read the sensor on analog A9:
     int sensorReading = analogRead(A9);
     // map the sensor range (four options):
     // ex: 'long int map(long int, long int, long int, long int, long int)'

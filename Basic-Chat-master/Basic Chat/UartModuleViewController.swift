@@ -30,8 +30,6 @@ class UartModuleViewController: UIViewController, CBPeripheralManagerDelegate, U
         //-Notification for updating the text view with incoming text
         updateIncomingData()
     }
-   
-
     
     override func viewDidDisappear(_ animated: Bool) {
         peripheralManager?.stopAdvertising()
