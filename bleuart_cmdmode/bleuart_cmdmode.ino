@@ -45,8 +45,6 @@ void error(const __FlashStringHelper*err) {
 */
 /**************************************************************************/
 
-//CapacitiveSensor   cs_9_10 = CapacitiveSensor(9,10);        // 10M resistor between pins 4 & 2, pin 2 is sensor pin, add a wire and or foil if desired
-
 // lowest and highest sensor readings:
 const int sensorMin = 0;     // sensor minimum
 const int sensorMax = 1024;  // sensor maximum
