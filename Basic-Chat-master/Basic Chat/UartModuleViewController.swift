@@ -2,10 +2,7 @@
 //  UartModuleViewController.swift
 //  Basic Chat
 //
-//  Created by Trevor Beaton on 12/4/16.
-//  Copyright © 2016 Vanguard Logic LLC. All rights reserved.
-//  Modified by Nick Arner 9/3/17.
-//
+
 
 import UIKit
 import CoreBluetooth

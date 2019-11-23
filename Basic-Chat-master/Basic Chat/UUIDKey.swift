@@ -2,9 +2,7 @@
 //  UUIDKey.swift
 //  Basic Chat
 //
-//  Created by Trevor Beaton on 12/3/16.
-//  Copyright © 2016 Vanguard Logic LLC. All rights reserved.
-//
+
 
 import CoreBluetooth
 //Uart Service uuid
