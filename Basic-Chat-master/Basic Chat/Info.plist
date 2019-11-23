@@ -37,7 +37,7 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
-	<key>NSBluetoothAlwaysUseageDescription</key>
+	<key>NSBluetoothAlwaysUsageDescription</key>
 	<string>&quot;Please allow Bluetooth to use this demo&quot;</string>
 </dict>
 </plist>
