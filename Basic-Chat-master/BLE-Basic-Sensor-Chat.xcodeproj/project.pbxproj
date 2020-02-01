@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		D50657231DF2F4C8002B7557 /* UUIDKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUIDKey.swift; sourceTree = "<group>"; };
 		D50657251DF45E04002B7557 /* UartModuleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UartModuleViewController.swift; sourceTree = "<group>"; };
-		D5B24DD81DEE393B00D33B5A /* Basic Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5B24DD81DEE393B00D33B5A /* BLE-Basic-Sensor-Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BLE-Basic-Sensor-Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B24DDB1DEE393B00D33B5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5B24DE01DEE393B00D33B5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5B24DE21DEE393B00D33B5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		D5B24DD91DEE393B00D33B5A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D5B24DD81DEE393B00D33B5A /* Basic Chat.app */,
+				D5B24DD81DEE393B00D33B5A /* BLE-Basic-Sensor-Chat.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,9 +76,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D5B24DD71DEE393B00D33B5A /* Basic Chat */ = {
+		D5B24DD71DEE393B00D33B5A /* BLE-Basic-Sensor-Chat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5B24DEA1DEE393B00D33B5A /* Build configuration list for PBXNativeTarget "Basic Chat" */;
+			buildConfigurationList = D5B24DEA1DEE393B00D33B5A /* Build configuration list for PBXNativeTarget "BLE-Basic-Sensor-Chat" */;
 			buildPhases = (
 				D5B24DD41DEE393B00D33B5A /* Sources */,
 				D5B24DD51DEE393B00D33B5A /* Frameworks */,
@@ -88,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = "Basic Chat";
+			name = "BLE-Basic-Sensor-Chat";
 			productName = "Basic Chat";
-			productReference = D5B24DD81DEE393B00D33B5A /* Basic Chat.app */;
+			productReference = D5B24DD81DEE393B00D33B5A /* BLE-Basic-Sensor-Chat.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +110,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D5B24DD31DEE393B00D33B5A /* Build configuration list for PBXProject "Basic Chat" */;
+			buildConfigurationList = D5B24DD31DEE393B00D33B5A /* Build configuration list for PBXProject "BLE-Basic-Sensor-Chat" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -123,7 +123,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D5B24DD71DEE393B00D33B5A /* Basic Chat */,
+				D5B24DD71DEE393B00D33B5A /* BLE-Basic-Sensor-Chat */,
 			);
 		};
 /* End PBXProject section */
@@ -320,7 +320,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D5B24DD31DEE393B00D33B5A /* Build configuration list for PBXProject "Basic Chat" */ = {
+		D5B24DD31DEE393B00D33B5A /* Build configuration list for PBXProject "BLE-Basic-Sensor-Chat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5B24DE81DEE393B00D33B5A /* Debug */,
@@ -329,7 +329,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5B24DEA1DEE393B00D33B5A /* Build configuration list for PBXNativeTarget "Basic Chat" */ = {
+		D5B24DEA1DEE393B00D33B5A /* Build configuration list for PBXNativeTarget "BLE-Basic-Sensor-Chat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5B24DEB1DEE393B00D33B5A /* Debug */,
